@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class SIGFileOlvas {
 
 	public static void main(String[] args) throws FileNotFoundException {
-		Scanner scanner = new Scanner(new File("slyizs.txt"));
+		Scanner scanner = new Scanner(new File("hengsperger.txt"));
 		int osszeg = 0;
 
 		while (scanner.hasNextInt()) {
