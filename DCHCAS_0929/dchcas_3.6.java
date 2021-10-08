@@ -33,8 +33,8 @@ public class DCHCAS_36 implements Serializable {
 	}
 
 	public static int hf4() {
-		DCHCAS_36[] autok = { new DCHCAS_36("IUP-232", "Opel", 600000), new DCHCAS_36("PZL-434", "Ford", 5000000),
-				new DCHCAS_36("RPL-544", "Suzuki", 4000000) };
+		DCHCAS_36[] autok = { new DCHCAS_36("VUF-234", "Opel", 600000), new DCHCAS_36("UNF-346", "Volvo", 5000000),
+				new DCHCAS_36("FAD-476", "Toyota", 4000000) };
 
 		try {
 			ObjectOutputStream kifile = new ObjectOutputStream(new FileOutputStream("Autok.dat"));
