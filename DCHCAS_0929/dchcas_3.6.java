@@ -8,7 +8,7 @@ import java.io.ObjectOutputStream;
 import java.io.Serializable;
 import java.util.Scanner;
 
-public class HVM06X_6 implements Serializable {
+public class DCHCAS_36 implements Serializable {
 
 	public static void main(String[] args) {
 
