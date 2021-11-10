@@ -35,5 +35,7 @@ insert into auto values('KAP-290','BMW 316','Fekete',6,2350,102);
 insert into auto values('GDF-525','Renault Twingo','Fekete',16,280,NULL);
 insert into auto values('HUB-936','Suzuki Swift','Fekete',16,500,NULL);
 
-SELECT rendszam FROM auto AND nev FROM tulajdonos;
 
+1. feladat
+
+SELECT rendszam FROM auto AND nev FROM tulajdonos;
