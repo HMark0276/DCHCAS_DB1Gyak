@@ -30,11 +30,10 @@ insert into auto values('JXJ-239','Suzuki Swift','Zold',15,450,105);
 insert into auto values('JAH-425','Skoda Fabia','Piros',13,620,102);
 insert into auto values('MLM-211','Toyota Yaris','Feher',3,1850,105);
 insert into auto values('KFT-204','Opel Astra','Szurke',7,1250,106);
-insert into auto values('JCD-443','Opel Astra','Feher',12,990,1007);
+insert into auto values('JCD-443','Opel Astra','Feher',12,990,107);
 insert into auto values('KAP-290','BMW 316','Fekete',6,2350,102);
 insert into auto values('GDF-525','Renault Twingo','Fekete',16,280,NULL);
 insert into auto values('HUB-936','Suzuki Swift','Fekete',16,500,NULL);
 
 SELECT auto.rendszam tulajdonos.nev;
-FROM auto;
-JOIN tulajdonos;
+
