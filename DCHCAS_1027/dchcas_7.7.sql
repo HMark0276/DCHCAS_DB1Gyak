@@ -9,6 +9,6 @@ ear INT CHECK (EAR > 0),
 kategoria CHAR(20)
 );
 
-alter table termekek add (szín char(20)); /*új szín mező felvitele */
-drop table termekek; /*termekek tábla megszüntetese */
-delete from termekek where kategoria is null; /*azon mezők megszüntetése,ahol nincs kitöltve a kategoria */
+alter table termekek add (szín char(20));
+drop table termekek;
+delete from termekek where kategoria is null;
