@@ -13,7 +13,7 @@ create table Terulet(
 	szarm_terulet VARCHAR(30),
 	jelen_terulet VARCHAR(30),
 	ved_statusz BOOLEAN,
-	kihalas_ideje VARCHAR(40),
+	kihalas_ideje VARCHAR(10),
 	Foreign key(fajnev) references Megnevezes(fajnev))
 );
 
