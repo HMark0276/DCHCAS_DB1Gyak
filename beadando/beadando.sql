@@ -12,7 +12,7 @@ create table Megnevezes(
 create table Terulet(
 	szarm_terulet VARCHAR(30),
 	jelen_terulet VARCHAR(30),
-	ved_statusz boolean,
+	ved_statusz BOOLEAN,
 	kihalas_ideje VARCHAR(40),
 	Foreign key(fajnev) references Megnevezes(fajnev))
 );
@@ -27,7 +27,7 @@ create table Megjelenes(
 
 create table Ragadozo(
 	vadasz_idoszak VARCHAR(20),
-	territorium INT(3),
+	territorium VARCHAR(3),
 	koz_statusz VARCHAR(20),
 	preda VARCHAR(10),
 	Foreign key(fajnev) references Megnevezes(fajnev))
