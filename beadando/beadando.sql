@@ -35,7 +35,7 @@ create table Ragadozo(
 
 create table Utodjai(
 	himek_versengese VARCHAR(20),
-	vemh_ideje VARCHAR(20),
+	vemh_ideje INT CHECK(vemh_ideje > 0),
 	kolykok_szama INT CHECK(kolykok_szama > 0),
 	tulelo_utodok_szama INT CHECK(tulelo_utodok_szama > 0),
 	Foreign key(fajnev) references Megnevezes(fajnev))
@@ -80,12 +80,12 @@ insert into Ragadozo values('ejszaka','sziklas terulet','maganyos','kozepes emlo
 insert into Ragadozo values('ejszaka','erdos resz','maganyos','nagyobb emlosok','Bengali tigris');
 insert into Ragadozo values('nappal','magas fuves terulet','maganyos','nagytestu novenyevok','Kaszpi tigris');
 
-insert into Utodjai values('agressziv','3.5 honap',6,2,'Sziberiai tigris');
-insert into Utodjai values('agressziv','3 honap',6,3,'Del-kinai tigris');
-insert into Utodjai values('nem tudni','nem tudni',3,1,'Bali tigris');
-insert into Utodjai values('passziv','4 honap',5,2,'Indokinai tigris');
-insert into Utodjai values('agressziv','3 honap',6,3,'Malaj tigris');
-insert into Utodjai values('nem tudni','nem tudni',3,1,'Javai tigris');
-insert into Utodjai values('passziv','3 honap',7,3,'Szumatrai tigris');
-insert into Utodjai values('agressziv','3 honap',4,3,'Bengali tigris');
-insert into Utodjai values('nem tudni','nem tudni',3,1,'Kaszpi tigris');
+insert into Utodjai values('agressziv',3,6,2,'Sziberiai tigris');
+insert into Utodjai values('agressziv',3,6,3,'Del-kinai tigris');
+insert into Utodjai values('nem tudni',4,3,1,'Bali tigris');
+insert into Utodjai values('passziv',4,5,2,'Indokinai tigris');
+insert into Utodjai values('agressziv',3,6,3,'Malaj tigris');
+insert into Utodjai values('nem tudni',3,3,1,'Javai tigris');
+insert into Utodjai values('passziv',3,7,3,'Szumatrai tigris');
+insert into Utodjai values('agressziv',3,4,3,'Bengali tigris');
+insert into Utodjai values('nem tudni',4,3,1,'Kaszpi tigris');
