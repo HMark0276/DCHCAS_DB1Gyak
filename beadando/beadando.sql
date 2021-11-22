@@ -79,3 +79,13 @@ insert into Ragadozo values('barmikor','erdos resz','maganyos','patasok','Javai 
 insert into Ragadozo values('ejszaka','sziklas terulet','maganyos','kozepes emlosok','Szumatrai tigris');
 insert into Ragadozo values('ejszaka','erdos resz','maganyos','nagyobb emlosok','Bengali tigris');
 insert into Ragadozo values('nappal','magas fuves terulet','maganyos','nagytestu novenyevok','Kaszpi tigris');
+
+insert into Utodjai values('3.5 honap',6,2,'Sziberiai tigris');
+insert into Utodjai values('3 honap',6,3,'Del-kinai tigris');
+insert into Utodjai values('nem tudni',3,1,'Bali tigris');
+insert into Utodjai values('4 honap',5,2,'Indokinai tigris');
+insert into Utodjai values('3 honap',6,3,'Malaj tigris');
+insert into Utodjai values('nem tudni',3,1,'Javai tigris');
+insert into Utodjai values('3 honap',7,3,'Szumatrai tigris');
+insert into Utodjai values('3 honap',4,3,'Bengali tigris');
+insert into Utodjai values('nem tudni',3,1,'Kaszpi tigris');
