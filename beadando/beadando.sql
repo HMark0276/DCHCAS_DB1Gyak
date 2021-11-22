@@ -27,3 +27,5 @@ create table Eletmod(
     koz_statusz varchar(20),
     preda varchar(10)
 );
+
+insert into Tigris values
