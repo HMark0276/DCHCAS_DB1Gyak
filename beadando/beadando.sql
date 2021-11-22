@@ -60,7 +60,7 @@ insert into Terulet values('Malajzia','Indonezia',1,'nincs','Szumatrai tigris');
 insert into Terulet values('India','Sundarbans',1,'nincs','Bengali tigris');
 insert into Terulet values('Kina','Sziberia',0,'1996','Kaszpi tigris');
 
-insert into Megjelenes values(310,220,'vastag csikok','sotet sarga','Bengali tigris');
+insert into Megjelenes values(310,220,'vastag csikok','sotet sarga','Sziberiai tigris');
 insert into Megjelenes values(250,150,'keskeny csikok','sarga','Del-kinai tigris');
 insert into Megjelenes values(170,80,'keskeny csikok','narancs','Bali tigris');
 insert into Megjelenes values(250,200,'keskeny csikok','sotet sarga','Indokinai tigris');
@@ -69,3 +69,13 @@ insert into Megjelenes values(250,120,'keskeny csikok','narancs','Javai tigris')
 insert into Megjelenes values(220,110,'keskeny csikok','sotet sarga','Szumatrai tigris');
 insert into Megjelenes values(330,260,'vastag csikok',' vilagos sarga','Bengali tigris');
 insert into Megjelenes values(290,240,'keskeny csikok','voros','Kaszpi tigris');
+
+insert into Ragadozo values('ejszaka','fuves terulet','maganyos','nagytestu novenyevok','Sziberiai tigris');
+insert into Ragadozo values('barmikor','sziklas terulet','maganyos','patasok','Del-kinai tigris');
+insert into Ragadozo values('ejszaka','erdos resz','maganyos','kozepes emlosok','Bali tigris');
+insert into Ragadozo values('barmikor','magas fuves terulet','maganyos','kozepes emlosok','Indokinai tigris');
+insert into Ragadozo values('ejszaka','magas fuves terulet','maganyos','kozepes emlosok','Malaj tigris');
+insert into Ragadozo values('barmikor','erdos resz','maganyos','patasok','Javai tigris');
+insert into Ragadozo values('ejszaka','sziklas terulet','maganyos','kozepes emlosok','Szumatrai tigris');
+insert into Ragadozo values('ejszaka','erdos resz','maganyos','nagyobb emlosok','Bengali tigris');
+insert into Ragadozo values('nappal','magas fuves terulet','maganyos','nagytestu novenyevok','Kaszpi tigris');
