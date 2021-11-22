@@ -27,9 +27,9 @@ create table Megjelenes(
 
 create table Ragadozo(
 	vadasz_idoszak VARCHAR(20),
-	territorium VARCHAR(3),
+	territorium VARCHAR(20),
 	koz_statusz VARCHAR(20),
-	preda VARCHAR(10),
+	preda VARCHAR(20),
 	Foreign key(fajnev) references Megnevezes(fajnev))
 );
 
