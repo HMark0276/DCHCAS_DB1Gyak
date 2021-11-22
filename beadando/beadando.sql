@@ -59,3 +59,13 @@ insert into Terulet values('Java','nincs',0,'1980','Javai tigris');
 insert into Terulet values('Malajzia','Indonezia',1,'nincs','Szumatrai tigris');
 insert into Terulet values('India','Sundarbans',1,'nincs','Bengali tigris');
 insert into Terulet values('Kina','Sziberia',0,'1996','Kaszpi tigris');
+
+insert into Megjelenes values(310,220,'vastag csikok','sotet sarga','Bengali tigris');
+insert into Megjelenes values(250,150,'keskeny csikok','sarga','Del-kinai tigris');
+insert into Megjelenes values(170,80,'keskeny csikok','narancs','Bali tigris');
+insert into Megjelenes values(250,200,'keskeny csikok','sotet sarga','Indokinai tigris');
+insert into Megjelenes values(200,100,'fekete-feher csikok','sarga','Malaj tigris');
+insert into Megjelenes values(250,120,'keskeny csikok','narancs','Javai tigris');
+insert into Megjelenes values(220,110,'keskeny csikok','sotet sarga','Szumatrai tigris');
+insert into Megjelenes values(330,260,'vastag csikok',' vilagos sarga','Bengali tigris');
+insert into Megjelenes values(290,240,'keskeny csikok','voros','Kaszpi tigris');
