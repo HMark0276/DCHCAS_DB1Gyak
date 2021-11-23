@@ -14,7 +14,7 @@ create table Terulet(
 	jelen_terulet VARCHAR(30),
 	ved_statusz BOOLEAN,
 	kihalas_ideje VARCHAR(10),
-	Foreign key(fajnev) references Megnevezes(fajnev))
+	Foreign key(fajnev) references Megnevezes(fajnev)
 );
 
 create table Megjelenes(
@@ -22,7 +22,7 @@ create table Megjelenes(
 	suly INT(3),
 	minta VARCHAR(30),
 	szin VARCHAR(20),
-	Foreign key(fajnev) references Megnevezes(fajnev))
+	Foreign key(fajnev) references Megnevezes(fajnev)
 );
 
 create table Ragadozo(
@@ -30,7 +30,7 @@ create table Ragadozo(
 	territorium VARCHAR(20),
 	koz_statusz VARCHAR(20),
 	preda VARCHAR(20),
-	Foreign key(fajnev) references Megnevezes(fajnev))
+	Foreign key(fajnev) references Megnevezes(fajnev)
 );
 
 create table Utodjai(
