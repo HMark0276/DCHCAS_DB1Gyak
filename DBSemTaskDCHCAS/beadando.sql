@@ -38,7 +38,8 @@ create table Utodjai(
 	vemh_ideje INT CHECK(vemh_ideje > 0),
 	kolykok_szama INT CHECK(kolykok_szama > 0),
 	tulelo_utodok_szama INT CHECK(tulelo_utodok_szama > 0),
-	Foreign key(fajnev) references Megnevezes(fajnev))
+	Foreign key(fajnev) references Megnevezes(fajnev)
+);
 
 insert into Megnevezes values('Sziberiai tigris','Panthera tigris altaica','Parducformak','Pantherinae');
 insert into Megnevezes values('Del-kinai tigris','Panthera tigris amoyensis','Parducformak','Pantherinae');
