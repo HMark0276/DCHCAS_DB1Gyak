@@ -14,7 +14,17 @@ create table targy(
 	megnevezes VARCHAR(20)
 );
 
-craete table 
+create table hallgato(
+	neptunkod VARCHAR(6) PRIMARY KEY,
+	nev VARCHAR(20),
+	tankor VARCHAR(20),
+	szul_d DATE,
+	eletkor INT(2),
+	irszam INT(4),
+	varos VARCHAR(20),
+	utca VARCHAR(20),
+	hsz INT(3)
+);
 
 
 create table hallgat(
