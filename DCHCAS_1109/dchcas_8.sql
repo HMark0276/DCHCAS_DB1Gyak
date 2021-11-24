@@ -18,17 +18,20 @@ create table termek(
     gyarto INT(3) REFERENCES gyarto(adoszam)
 );
 
-create table komponens(
-	termek INT(20) REFERENCES termek(tkod),
-    alkatresz INT(20) REFERENCES alkatresz(akod)	
-);
+insert into gyarto values(10,'ABC','Miskolc'); 
+insert into gyarto values(20,'DEF','Gyor'); 
+insert into gyarto values(30,'GHI',NULL);
+insert into gyarto values(40,'JKL','Gyor');
+insert into gyarto values(50,'MNO','Budapest'); 
 
-create table alkatresz(
-	akod INT(30),
-    nev VARCHAR(50)
-);
+insert into termek values(01,'csokolade',3600,10);
+insert into termek values(02,'tej',4000,20);
+insert into termek values(03,'gereblye',5000,30);
+insert into termek values(04,'kefir',3200,40);
+insert into termek values(05,'kenyer',1000,10);
 
-create table egysegek(
-	aru INT(30) REFERENCES termek(tkod),
-    db INT CHECK(db>0)
-);
+select * from termek where ear>3000;
+select nev, adoszam from gyarto where telephely='Gyor';
+select count(tkod) from termek where ear>3000;
+select tkod from termek where nev='tej';
+select nev from gyarto where telephely=NULL;
