@@ -4,7 +4,7 @@ use dchcas;
 
 create table Megnevezes(
 	ID INT(1) NOT NULL PRIMARY KEY,
-    fajnev VARCHAR(30),
+	fajnev VARCHAR(30),
 	tudom_nev VARCHAR(30),
 	tudom_alcsalad VARCHAR(30),
 	alcsalad VARCHAR(30)
@@ -12,7 +12,7 @@ create table Megnevezes(
 
 create table Terulet(
 	T_ID INT(1) NOT NULL PRIMARY KEY,
-    szarm_terulet VARCHAR(30),
+	szarm_terulet VARCHAR(30),
 	jelen_terulet VARCHAR(30),
 	ved_statusz BOOLEAN,
 	kihalas_ideje VARCHAR(10),
@@ -21,7 +21,7 @@ create table Terulet(
 
 create table Megjelenes(
 	M_ID INT(1) NOT NULL PRIMARY KEY,
-    meret INT(3),
+	meret INT(3),
 	suly INT(3),
 	minta VARCHAR(30),
 	szin VARCHAR(20),
