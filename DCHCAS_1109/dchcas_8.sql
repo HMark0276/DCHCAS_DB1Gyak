@@ -76,3 +76,42 @@ select termek.nev,gyarto.nev from termek,gyarto;
 select termek.nev,gyarto.nev,ear from termek,gyarto, termek;
 select termek.nev,alkatresz.nev from termek,alkatresz;
 select akod from alkatresz where akod=NULL;
+3.RESZ
+create table tanfolyam(
+	tkod INT PRIMARY KEY,
+	ar INT CHECK(ar>0),
+	megnevezes VARCHAR(50),
+	tipus VARCHAR(1)
+);
+
+create table befizetes(
+	kurzus INT NOT NULL,
+	diak BOOLEAN,
+	befizetes INT,
+	FOREIGN KEY(kurzus) references tanfolyam(tkod),
+	FOREIGN KEY(diak) references resztvevo(tajszam)
+);
+
+create table resztvevo(
+	tajszam VARCHAR(12) PRIMARY KEY,
+	nev VARCHAR(50),
+	lakcim VARCHAR(100)
+);
+
+insert into tanfolyam(10,60000,'informatika',1);
+insert into tanfolyam(20,40000,'matematika',1);
+insert into tanfolyam(30,25000,'geodezia',2);
+insert into tanfolyam(40,15000,'gazdasagtan',3);
+insert into tanfolyam(50,40000,'logisztika',4);
+
+insert into befizetes(10,1,30000);
+insert into befizetes(20,1,15000);
+insert into befizetes(30,1,20000);
+insert into befizetes(30,1,10000);
+insert into befizetes(40,1,10000);
+
+insert into resztvevo('abc1','Istvan','Miskolc, Ady utca');
+insert into resztvevo('abc2','Balazs','Budapest, Ar utca');
+insert into resztvevo('abc3','Laura','Miskolc, Petofi utca');
+insert into resztvevo('abc4','Dezso','Debrecen, Kossuth utca');
+insert into resztvevo('abc5','Agnes','Miskolc, Erenyo utca');
