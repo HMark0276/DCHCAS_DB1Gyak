@@ -72,7 +72,7 @@ select count(tkod) from termek where ear>3000;
 select tkod from termek where nev='tej';
 select nev from gyarto where telephely=NULL;
 2.RESZ
-select nev,nev from termek,gyarto;
-select nev,nev,ear from termek,gyarto, termek;
-select nev,nev from termek,alkatresz;
+select termek.nev,gyarto.nev from termek,gyarto;
+select termek.nev,gyarto.nev,ear from termek,gyarto, termek;
+select termek.nev,alkatresz.nev from termek,alkatresz;
 select akod from alkatresz where akod=NULL;
