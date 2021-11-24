@@ -3,11 +3,19 @@ create database dchcas;
 use dchcas;
 
 create table Megnevezes(
-	ID INT(1) NOT NULL PRIMARY KEY,
+	ID INT(1) PRIMARY KEY,
 	fajnev VARCHAR(30),
 	tudom_nev VARCHAR(30),
 	tudom_alcsalad VARCHAR(30),
 	alcsalad VARCHAR(30)
+);
+
+create table kulso(
+	ID INT(1),
+	M_ID INT(1),
+	FOREIGN KEY (ID) references Megnevezes(ID),
+	FOREIGN KEY (M_ID) references Megjelenes(M_ID),
+	PRIMARY KEY(ID,M_ID)
 );
 
 create table Terulet(
