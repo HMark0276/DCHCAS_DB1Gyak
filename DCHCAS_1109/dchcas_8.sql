@@ -36,11 +36,11 @@ create table alkatresz(
 	nev VARCHAR(30)
 );
 1.RESZ
-insert into gyarto values(10,'ABC','Miskolc'); 
-insert into gyarto values(20,'DEF','Gyor'); 
-insert into gyarto values(30,'GHI',NULL);
-insert into gyarto values(40,'JKL','Gyor');
-insert into gyarto values(50,'MNO','Budapest'); 
+insert into gyarto values(10,'ABC','Miskolc',3344,'Miskolc','Benedek'); 
+insert into gyarto values(20,'DEF','Gyor',2544,'Gyor','Kazincy'); 
+insert into gyarto values(30,'GHI','Budapest',1344,'Miskolc','Petofi');
+insert into gyarto values(40,'JKL','Gyor',2344,'Budapest','Gyori');
+insert into gyarto values(50,'MNO','Budapest',1304,'Miskolc','Ady'); 
 
 insert into termek values(01,'csokolade',3600,10);
 insert into termek values(02,'tej',4000,20);
@@ -48,9 +48,23 @@ insert into termek values(03,'gereblye',5000,30);
 insert into termek values(04,'kefir',3200,40);
 insert into termek values(05,'kenyer',1000,10);
 
-insert into egysegek(
-	
-);
+insert into egysegek values(01,16);
+insert into egysegek values(02,10);
+insert into egysegek values(03,30);
+insert into egysegek values(04,12);
+insert into egysegek values(05,30);
+
+insert into komponens values(01,01);
+insert into komponens values(02,02);
+insert into komponens values(03,03);
+insert into komponens values(04,04);
+insert into komponens values(05,05);
+
+insert into alkatresz values(01,'doboz');
+insert into alkatresz values(02,'uveg');
+insert into alkatresz values(03,'doboz');
+insert into alkatresz values(04,'doboz');
+insert into alkatresz values(05,'uveg');
 1.RESZ
 select * from termek where ear>3000;
 select nev, adoszam from gyarto where telephely='Gyor';
