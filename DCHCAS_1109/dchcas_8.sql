@@ -62,10 +62,10 @@ insert into komponens values(05,05);
 
 insert into alkatresz values(01,'doboz');
 insert into alkatresz values(02,'uveg');
+insert into alkatresz values(03,'kupak');
 insert into alkatresz values(03,'doboz');
-insert into alkatresz values(04,'doboz');
 insert into alkatresz values(05,'uveg');
-1.RESZ
+
 select * from termek where ear>3000;
 select nev, adoszam from gyarto where telephely='Gyor';
 select count(tkod) from termek where ear>3000;
@@ -74,4 +74,5 @@ select nev from gyarto where telephely=NULL;
 2.RESZ
 select nev,nev from termek,gyarto;
 select nev,nev,ear from termek,gyarto, termek;
-select 
+select nev,nev from termek,alkatresz;
+select akod from alkatresz where akod=NULL;
