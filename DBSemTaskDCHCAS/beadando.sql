@@ -1,68 +1,68 @@
-create database dchcas;
+create database dchcas3;
 
-use dchcas;
+use dchcas3;
 
 create table Megnevezes(
-	ID INT(1) PRIMARY KEY,
+	ID INT(3) PRIMARY KEY,
 	fajnev VARCHAR(30),
 	tudom_nev VARCHAR(30),
 	tudom_alcsalad VARCHAR(30),
 	alcsalad VARCHAR(30)
 );
 
+create table Terulet(
+	T_ID INT(3) PRIMARY KEY,
+	szarm_terulet VARCHAR(30),
+	jelen_terulet VARCHAR(30),
+	ved_statusz BOOLEAN,
+	kihalas_ideje VARCHAR(10),
+	ID INT(3) references Megnevezes(ID)
+);
+
+create table Megjelenes(
+	M_ID INT(3) PRIMARY KEY,
+	meret INT(3),
+	suly INT(3),
+	minta VARCHAR(30),
+	szin VARCHAR(20),
+	ID INT(3) references Megnevezes(ID)
+);
+
+create table Ragadozo(
+	R_ID INT (3) PRIMARY KEY,
+	vadasz_idoszak VARCHAR(20),
+	territorium VARCHAR(20),
+	koz_statusz VARCHAR(20),
+	preda VARCHAR(20),
+	ID INT(3) references Megnevezes(ID)
+);
+
 create table kulso(
-	ID INT(1),
-	M_ID INT(1),
+	ID INT(3),
+	M_ID INT(3),
 	FOREIGN KEY (ID) references Megnevezes(ID),
 	FOREIGN KEY (M_ID) references Megjelenes(M_ID),
 	PRIMARY KEY(ID,M_ID)
 );
 
-create table Terulet(
-	T_ID INT(1) PRIMARY KEY,
-	szarm_terulet VARCHAR(30),
-	jelen_terulet VARCHAR(30),
-	ved_statusz BOOLEAN,
-	kihalas_ideje VARCHAR(10),
-	ID INT(1) references Megnevezes(ID)
-);
-
-create table Megjelenes(
-	M_ID INT(1) PRIMARY KEY,
-	meret INT(3),
-	suly INT(3),
-	minta VARCHAR(30),
-	szin VARCHAR(20),
-	ID INT(1) references Megnevezes(ID)
-);
-
-create table Ragadozo(
-	R_ID INT PRIMARY KEY,
-	vadasz_idoszak VARCHAR(20),
-	territorium VARCHAR(20),
-	koz_statusz VARCHAR(20),
-	preda VARCHAR(20),
-	ID INT(1) references Megnevezes(ID)
-);
-
 create table Utodjai(
-	U_ID INT(1) PRIMARY KEY,
+	U_ID INT(3) PRIMARY KEY,
 	himek_versengese VARCHAR(20),
 	vemh_ideje INT CHECK(vemh_ideje > 0),
 	kolykok_szama INT CHECK(kolykok_szama > 0),
 	tulelo_utodok_szama INT CHECK(tulelo_utodok_szama > 0),
-	ID INT(1) references Megnevezes(ID)
+	ID INT(3) references Megnevezes(ID)
 );
 
-insert into Megnevezes values(1,'Sziberiai tigris','Panthera tigris altaica','Parducformak','Pantherinae',1);
-insert into Megnevezes values(2,'Del-kinai tigris','Panthera tigris amoyensis','Parducformak','Pantherinae',2);
-insert into Megnevezes values(3,'Bali tigris','Panthera tigris balica','Parducformak','Pantherinae',3);
-insert into Megnevezes values(4,'Indokinai tigris','Panthera tigris corbetti','Parducformak','Pantherinae',4);
-insert into Megnevezes values(5,'Malaj tigris','Panthera tigris jacksoni','Parducformak','Pantherinae',5);
-insert into Megnevezes values(6,'Javai tigris','Panthera tigris sondaica','Parducformak','Pantherinae',6);
-insert into Megnevezes values(7,'Szumatrai tigris','Panthera tigris sumatrae','Parducformak','Pantherinae',7);
-insert into Megnevezes values(8,'Bengali tigris','Panthera tigris tigris','Parducformak','Pantherinae',8);
-insert into Megnevezes values(9,'Kaszpi tigris','Panthera tigris virgata','Parducformak','Pantherinae',9);
+insert into Megnevezes values(1,'Sziberiai tigris','Panthera tigris altaica','Parducformak','Pantherinae');
+insert into Megnevezes values(2,'Del-kinai tigris','Panthera tigris amoyensis','Parducformak','Pantherinae');
+insert into Megnevezes values(3,'Bali tigris','Panthera tigris balica','Parducformak','Pantherinae');
+insert into Megnevezes values(4,'Indokinai tigris','Panthera tigris corbetti','Parducformak','Pantherinae');
+insert into Megnevezes values(5,'Malaj tigris','Panthera tigris jacksoni','Parducformak','Pantherinae');
+insert into Megnevezes values(6,'Javai tigris','Panthera tigris sondaica','Parducformak','Pantherinae');
+insert into Megnevezes values(7,'Szumatrai tigris','Panthera tigris sumatrae','Parducformak','Pantherinae');
+insert into Megnevezes values(8,'Bengali tigris','Panthera tigris tigris','Parducformak','Pantherinae');
+insert into Megnevezes values(9,'Kaszpi tigris','Panthera tigris virgata','Parducformak','Pantherinae');
 
 insert into Terulet values(1,'Kina','Sziberia',1,'nincs',1);
 insert into Terulet values(2,'Kina','Kina',1,'nincs',2);
