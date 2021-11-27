@@ -14,7 +14,7 @@ create table Terulet(
 	T_ID INT(3) PRIMARY KEY,
 	szarm_terulet VARCHAR(30),
 	jelen_terulet VARCHAR(30),
-	ved_statusz BOOLEAN,
+	ved_statusz INT(2),
 	kihalas_ideje VARCHAR(10),
 	ID INT(3) references Megnevezes(ID)
 );
