@@ -1,0 +1,5 @@
+Megnevezes[ID, fajnev, alcsalad]
+Megjelenes[M_ID, meret, suly, szin, minta]
+Terulet[T_ID, szarm_terulet, jelen_terulet, vad_statusz, kihalas_ideje]
+Utodjai[U_ID, himek_versengese, vemh_ideje, kolykok_szama, tulelo_utodok_szama]
+Ragadozo[R_ID, vadasz_idoszak, territorium, koz_statusz, fobb_preda]
