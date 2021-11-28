@@ -1,39 +1,39 @@
-1.
+1. Kilistázza a Terulet tábla elemeit.
 SELECT * FROM terulet;
 π(Terulet)
 
-2.
+2. Kilistázza a Megnevezes táblából a fajnev és a tudom_nev nevű oszlopokat.
 SELECT fajnev, tudom_nev FROM megnevezes;
 πfajnev, tudom_nev(Megnevezes)
 
-3.
+3. Kilistázza a Megjelenes táblából azokat a mezőket, ahol a súly kevesebb, mint 150.
 SELECT * FROM megjelenes WHERE suly<150;
 𝜎suly<150(Megjelenes)
 
-4.
+4. Kiválasztja a sárga színű tigrisek méretét és súlyát.
 SELECT megjelenes.meret, megjelenes.suly FROM megjelenes WHERE szin=’sarga’;
 𝜋meret, suly (𝜎szin=’sarga’(Megjelenes)
 
-5.
+5. Kilistázza a Ragadozo és a Megnevezes táblából a fajonkénti preferált prédákat.
 SELECT megnevezes.fajnev, ragadozo.preda FROM megnevezes INNER JOIN ragadozo ON ragadozo.ID=megnevezes.ID;
 πfajnev, preda(Megnevezes Xragadozo.ID=megnevezes.ID Ragadozo)
 
-6.
+6. Kiválasztja a fajnevet és a szarm_teruletet ahol K-val kezdődik.
 SELECT megnevezes.fajnev, terulet.szarm_terulet FROM megnevezes INNER JOIN terulet ON terulet.ID=megnevezes.ID WHERE szarm_terulet LIKE 'K%';
 𝜋megnevezes.fajnev, terulet.szarm_terulet(σszam_terulet LIKE 'K%'(Megnevezes Xterulet.ID=megnevezes.ID Terulet)
 
-7.
+7. Kilistázza az összes olyan elemet a Terulet táblából kihalás ideje szerint rendezve, ahol a védelmi státusz értéke 0.
 SELECT * from terulet WHERE terulet.ved_statusz=0 GROUP BY (kihalas_ideje);
 𝜋((Terulet) ⨝terulet.ved_statusz=0) (ΓGROUP BY kihalas_ideje(Terulet))
 
-8.
+8. Megszámolja a védettnek nyilvánított fajok számát.
 SELECT COUNT(terulet.ved_statusz) FROM terulet;
 𝜋COUNT(terulet.ved_statusz)(Terulet)
 
-9.
+9. Megmutatja a fajok szerinti születő utódok és a túlélő utódok számát, ahol a túlélő utódok száma egyenlő hárommal.
 SELECT megnevezes.fajnev, utodjai.kolykok_szama, utodjai.tulelo_utodok_szama FROM megnevezes INNER JOIN utodjai ON utodjai.ID=megnevezes.ID WHERE tulelo_utodok_szama=3;
 𝜋megnevezes.fajnev utodjai.kolykok_szama, utodjai.tulelo_utodok_szama(Megnevezes Xutodjai.ID=megnevezes.ID Utodjai)⨝tulelo_utodok_szama=3(Utodjai)
 
-10.
+10. Kilistázza a fajnevenként az összes ID-t.
 SELECT megnevezes.fajnev, megnevezes.ID, megjelenes.M_ID, terulet.T_ID, ragadozo.R_ID, utodjai.U_ID FROM megnevezes INNER JOIN megjelenes ON megjelenes.ID=megnevezes.ID INNER JOIN terulet ON terulet.ID=megnevezes.ID INNER JOIN ragadozo ON ragadozo.ID=megnevezes.ID INNER JOIN utodjai ON utodjai.ID=megnevezes.ID;
 𝜋megnevezes.fajnev, megnevezes.ID, megjelenes.M_ID, terulet.T_ID, ragadozo.R_ID, utodjai.U_ID((((Megnevezes Xmegjelenes.ID=megnevezes.ID Megjelenes) Xterulet.ID=megnevezes.ID Terulet) Xragadozo.ID=megnevezes.ID Ragadozo) Xutodjai.ID=megnevezes.ID Utodjai)
