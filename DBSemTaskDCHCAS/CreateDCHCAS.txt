@@ -1,0 +1,55 @@
+create database dchcas5;
+
+use dchcas5;
+
+create table Megnevezes(
+	ID INT(3) PRIMARY KEY,
+	fajnev VARCHAR(30),
+	tudom_nev VARCHAR(30),
+	tudom_alcsalad VARCHAR(30),
+	alcsalad VARCHAR(30)
+);
+
+create table Terulet(
+	T_ID INT(3) PRIMARY KEY,
+	szarm_terulet VARCHAR(30),
+	jelen_terulet VARCHAR(30),
+	ved_statusz INT(2),
+	kihalas_ideje VARCHAR(10),
+	ID INT(3) references Megnevezes(ID)
+);
+
+create table Megjelenes(
+	M_ID INT(3) PRIMARY KEY,
+	meret INT(3),
+	suly INT(3),
+	minta VARCHAR(30),
+	szin VARCHAR(20),
+	ID INT(3) references Megnevezes(ID)
+);
+
+create table Ragadozo(
+	R_ID INT (3) PRIMARY KEY,
+	vadasz_idoszak VARCHAR(20),
+	territorium VARCHAR(20),
+	koz_statusz VARCHAR(20),
+	preda VARCHAR(20),
+	ID INT(3) references Megnevezes(ID)
+);
+
+create table Utodjai(
+	U_ID INT(3) PRIMARY KEY,
+	himek_versengese VARCHAR(20),
+	vemh_ideje INT CHECK(vemh_ideje > 0),
+	kolykok_szama INT CHECK(kolykok_szama > 0),
+	tulelo_utodok_szama INT CHECK(tulelo_utodok_szama > 0),
+	ID INT(3) references Megnevezes(ID)
+);
+
+create table kulso(
+	ID INT(3),
+	M_ID INT(3),
+	FOREIGN KEY (ID) references Megnevezes(ID),
+	FOREIGN KEY (M_ID) references Megjelenes(M_ID),
+	PRIMARY KEY(ID,M_ID)
+);
