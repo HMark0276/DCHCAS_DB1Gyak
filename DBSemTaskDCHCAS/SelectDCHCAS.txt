@@ -1,0 +1,39 @@
+1.
+SELECT * FROM terulet;
+π(Terulet)
+
+2.
+SELECT fajnev, tudom_nev FROM megnevezes;
+πfajnev, tudom_nev(Megnevezes)
+
+3.
+SELECT * FROM megjelenes WHERE suly<150;
+𝜎suly<150(Megjelenes)
+
+4.
+SELECT megjelenes.meret, megjelenes.suly FROM megjelenes WHERE szin=’sarga’;
+𝜋meret, suly (𝜎szin=’sarga’(Megjelenes)
+
+5.
+SELECT megnevezes.fajnev, ragadozo.preda FROM megnevezes INNER JOIN ragadozo ON ragadozo.ID=megnevezes.ID;
+πfajnev, preda(Megnevezes Xragadozo.ID=megnevezes.ID Ragadozo)
+
+6.
+SELECT megnevezes.fajnev, terulet.szarm_terulet FROM megnevezes INNER JOIN terulet ON terulet.ID=megnevezes.ID WHERE szarm_terulet LIKE 'K%';
+𝜋megnevezes.fajnev, terulet.szarm_terulet(σszam_terulet LIKE 'K%'(Megnevezes Xterulet.ID=megnevezes.ID Terulet)
+
+7.
+SELECT * from terulet WHERE terulet.ved_statusz=0 GROUP BY (kihalas_ideje);
+𝜋((Terulet) ⨝terulet.ved_statusz=0) (ΓGROUP BY kihalas_ideje(Terulet))
+
+8.
+SELECT COUNT(terulet.ved_statusz) FROM terulet;
+𝜋COUNT(terulet.ved_statusz)(Terulet)
+
+9.
+SELECT megnevezes.fajnev, utodjai.kolykok_szama, utodjai.tulelo_utodok_szama FROM megnevezes INNER JOIN utodjai ON utodjai.ID=megnevezes.ID WHERE tulelo_utodok_szama=3;
+𝜋megnevezes.fajnev utodjai.kolykok_szama, utodjai.tulelo_utodok_szama(Megnevezes Xutodjai.ID=megnevezes.ID Utodjai)⨝tulelo_utodok_szama=3(Utodjai)
+
+10.
+SELECT megnevezes.fajnev, megnevezes.ID, megjelenes.M_ID, terulet.T_ID, ragadozo.R_ID, utodjai.U_ID FROM megnevezes INNER JOIN megjelenes ON megjelenes.ID=megnevezes.ID INNER JOIN terulet ON terulet.ID=megnevezes.ID INNER JOIN ragadozo ON ragadozo.ID=megnevezes.ID INNER JOIN utodjai ON utodjai.ID=megnevezes.ID;
+𝜋megnevezes.fajnev, megnevezes.ID, megjelenes.M_ID, terulet.T_ID, ragadozo.R_ID, utodjai.U_ID((((Megnevezes Xmegjelenes.ID=megnevezes.ID Megjelenes) Xterulet.ID=megnevezes.ID Terulet) Xragadozo.ID=megnevezes.ID Ragadozo) Xutodjai.ID=megnevezes.ID Utodjai)
