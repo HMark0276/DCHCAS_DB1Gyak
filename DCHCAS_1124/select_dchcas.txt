@@ -1,6 +1,6 @@
 1. oktatok neve
 SELECT oktato.nev FROM oktato;
-πnev(oktato)
+πnev(Oktato)
 
 2. oktatok es tantargyaik neve
 SELECT oktato.nev 
@@ -10,10 +10,13 @@ SELECT oktato.nev
 4. AIF Tsz-en dolgozó oktatók neve és tárgyaik címe
 
 5. átlagos kreditpontszám
+SELECT AVG(targy.kredit) FROM targy;
+𝜋AVG(targy.kredit)(Targy)
 
 6. AIF Tsz.-en oktatók létszáma
 
 7. legnagyobb kreditpontszámú tárgy(ak) címe
+SELECT MAX(
 
 8. oktatókat, akiknek nincs tárgya
 
