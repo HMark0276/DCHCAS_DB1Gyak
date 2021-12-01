@@ -1,0 +1,6 @@
+1. oktatok neve
+SELECT oktato.nev FROM oktato;
+πnev(oktato)
+
+2. oktatok es tantargyaik neve
+SELECT oktato.nev 
