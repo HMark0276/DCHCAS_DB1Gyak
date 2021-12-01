@@ -1,6 +1,6 @@
 1. oktatok neve
 SELECT oktato.nev FROM oktato;
-πnev(Oktato)
+πnev(oktato)
 
 2. oktatok es tantargyaik neve
 SELECT oktato.nev 
@@ -11,7 +11,7 @@ SELECT oktato.nev
 
 5. átlagos kreditpontszám
 SELECT AVG(targy.kredit) FROM targy;
-𝜋AVG(targy.kredit)(Targy)
+𝜋AVG(targy.kredit)(targy)
 
 6. AIF Tsz.-en oktatók létszáma
 
@@ -23,7 +23,8 @@ SELECT MAX(
 9. hallgatókat, akik a 2019/2020tanév II. félévében nem vettek fel tárgyat
 
 10. hallgatók születési dátumát
-
+SELECT hallgato.szul_d FROM hallgato;
+πszul_d(hallgato)
 11. tanszékenként az oktatók létszáma
 
 12. Melyik tárgyat hányan hallgatják
