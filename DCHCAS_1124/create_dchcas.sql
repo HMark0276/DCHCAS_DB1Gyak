@@ -35,3 +35,17 @@ create table hallgat(
 	FOREIGN KEY(kod) references targy(kod),
 	FOREIGN KEY(neptunkod) references hallgato(kod);
 );
+
+insert into oktato values('FVH884', 'Istvan', 'Matematika');
+insert into oktato values('H4GMNV', 'Gabor', 'Matematika');
+insert into oktato values('3CF4TJ', 'Janos', 'Informatika');
+insert into oktato values('2GGV45', 'Eva', 'Gazdasag');
+insert into oktato values('34CV5V', 'Anna', 'Matematika');
+
+insert into targy values('123','4','Valszam');
+insert into targy values('111','3','Gazdjog');
+insert into targy values('132','2','Progelm');
+insert into targy values('544','6','db1');
+insert into targy values('765','5','Oprendszerek');
+
+insert into hallgato values('
