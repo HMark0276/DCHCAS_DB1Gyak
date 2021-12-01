@@ -4,3 +4,31 @@ SELECT oktato.nev FROM oktato;
 
 2. oktatok es tantargyaik neve
 SELECT oktato.nev 
+
+3. oktatok es tantargyaik neve azok az oktatók is, akiknek nincs tárgya
+
+4. AIF Tsz-en dolgozó oktatók neve és tárgyaik címe
+
+5. átlagos kreditpontszám
+
+6. AIF Tsz.-en oktatók létszáma
+
+7. legnagyobb kreditpontszámú tárgy(ak) címe
+
+8. oktatókat, akiknek nincs tárgya
+
+9. hallgatókat, akik a 2019/2020tanév II. félévében nem vettek fel tárgyat
+
+10. hallgatók születési dátumát
+
+11. tanszékenként az oktatók létszáma
+
+12. Melyik tárgyat hányan hallgatják
+
+13. oktatók, akiknek 2-nél több tárgyuk van
+
+14. átlagnál alacsonyabb kreditpontú tárgyak oktatóinak nev
+
+15. legtöbb tárgyat tanító oktató neve
+
+16. Kik azok a hallgatók, akik minden tárgyat felvettek
