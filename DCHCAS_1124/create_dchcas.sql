@@ -30,7 +30,7 @@ create table hallgat(
 	kod INT NOT NULL,
 	neptunkod VARCHAR(6),
 	felev INT(1),
-	vizsgajegy INT(1)
+	vizsgajegy INT(1),
 	FOREIGN KEY(kod) references targy(kod),
-	FOREIGN KEY(neptunkod) references hallgato(kod);
+	FOREIGN KEY(neptunkod) references hallgato(kod)
 );
