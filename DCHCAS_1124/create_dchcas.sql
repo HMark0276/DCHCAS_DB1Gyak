@@ -2,16 +2,16 @@ create database dchcas_10;
 
 use dchcas_10;
 
-create table oktato(
-	neptunkod VARCHAR(6) PRIMARY KEY,
-	nev VARCHAR(30),
-	tanszek VARCHAR(20)
-);
-
 create table targy(
 	kod INT NOT NULL PRIMARY KEY,
 	kredit INT(1),
 	megnevezes VARCHAR(20)
+);
+
+create table oktato(
+	neptunkod VARCHAR(6) PRIMARY KEY,
+	nev VARCHAR(30),
+	tanszek VARCHAR(20)
 );
 
 create table hallgato(
@@ -25,7 +25,6 @@ create table hallgato(
 	utca VARCHAR(20),
 	hsz INT(3)
 );
-
 
 create table hallgat(
 	kod INT NOT NULL,
