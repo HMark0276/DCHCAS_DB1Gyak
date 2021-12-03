@@ -11,7 +11,8 @@ create table targy(
 create table oktato(
 	neptunkod VARCHAR(6) PRIMARY KEY,
 	nev VARCHAR(30),
-	tanszek VARCHAR(20)
+	tanszek VARCHAR(20),
+	kod INT references targy(kod)
 );
 
 create table hallgato(
