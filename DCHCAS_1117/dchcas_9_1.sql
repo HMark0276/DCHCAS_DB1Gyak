@@ -59,4 +59,8 @@ insert into alkatresz values(201,'nyel',3000);
 insert into alkatresz values(202,'fej',1000);
 insert into alkatresz values(203,'elezo',2000);
 
-select gyarto from termek where 
+ALTER TABLE alkatresz ADD ( ar INT CHECK (ar > 0));
+SELECT nev FROM gyarto WHERE adoszam NOT IN (SELECT gyarto FROM termek);
+UPDATE termek SET ear = 1.1*ear WHERE tkod IN ( SELECT termek FROM komponens WHERE alkatresz = (SELECT akod FROM alkatresz WHERE nev = ‘elezo’));
+CREATE VIEW bb AS SELECT MAX(t.nev) nev, t.tkod, COUNT(*) db FROM termek t INNER JOIN egysegek e ON e.aru = t.tkod GROUP BY t.tkod;
+SELECT nev FROM aa WHERE db = (SELECT MAX(db) FROM aa);
